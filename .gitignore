@@ -1,7 +1,20 @@
-echo "node_modules/
+# Ignore node_modules folder
+node_modules/
+
+# Logs
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Expo
 .expo/
 .expo-shared/
-.env
+
+# OS and IDE specific
 .DS_Store
-*.log" > .gitignore
+.idea/
+.vscode/
+
+# Environment files
+.env
 
