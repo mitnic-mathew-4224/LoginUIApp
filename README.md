@@ -1,50 +1,82 @@
-# Welcome to your Expo app 👋
+#### React Native Login UI App
 
-This is an [Expo](https://expo.dev) project created with [`create-expo-app`](https://www.npmjs.com/package/create-expo-app).
+This is a simple React Native login and signup UI developed using Expo.  
+It was built as part of an internship task.
 
-## Get started
 
-1. Install dependencies
+#### Features
 
-   ```bash
-   npm install
-   ```
+- Modern login screen UI
+- Signup screen with confirm password field
+- Navigation using `expo-router`
+- Logo added to all screens
+- Form validations
+- User data stored locally in a `user.json` file for login validation
 
-2. Start the app
 
-   ```bash
-   npx expo start
-   ```
 
-In the output, you'll find options to open the app in a
+#### Project Structure
 
-- [development build](https://docs.expo.dev/develop/development-builds/introduction/)
-- [Android emulator](https://docs.expo.dev/workflow/android-studio-emulator/)
-- [iOS simulator](https://docs.expo.dev/workflow/ios-simulator/)
-- [Expo Go](https://expo.dev/go), a limited sandbox for trying out app development with Expo
+LoginUIApp/
+--app/
+   ->index.js        # Get Started screen
+   ->login.js        # Login screen
+   ->signup.js       # Signup screen
+--assets/
+   ->logo.png        # App logo image
+--data/
+   -> user.json      # Locally stored user data
+--App.js             # Entry point for Expo
+--README.md          # Project info and usage
 
-You can start developing by editing the files inside the **app** directory. This project uses [file-based routing](https://docs.expo.dev/router/introduction).
 
-## Get a fresh project
+How to Run the App
 
-When you're ready, run:
+#### Install Expo CLI (if not already installed)
 
-```bash
-npm run reset-project
-```
+npm install -g expo-cli
 
-This command will move the starter code to the **app-example** directory and create a blank **app** directory where you can start developing.
 
-## Learn more
+### 2. Clone the Repository
 
-To learn more about developing your project with Expo, look at the following resources:
+git clone https://github.com/mitnic-mathew-4224/LoginUIApp.git
 
-- [Expo documentation](https://docs.expo.dev/): Learn fundamentals, or go into advanced topics with our [guides](https://docs.expo.dev/guides).
-- [Learn Expo tutorial](https://docs.expo.dev/tutorial/introduction/): Follow a step-by-step tutorial where you'll create a project that runs on Android, iOS, and the web.
+cd LoginUIApp
 
-## Join the community
 
-Join our community of developers creating universal apps.
+### 3. Install Dependencies
 
-- [Expo on GitHub](https://github.com/expo/expo): View our open source platform and contribute.
-- [Discord community](https://chat.expo.dev): Chat with Expo users and ask questions.
+npm install
+
+### 4. Start the Project
+
+npx expo start
+
+->Scan the QR code using Expo Go on your Android/iOS device  
+->Or run it in an emulator from the Expo dev tools
+
+
+
+#### Technologies Used
+
+->React Native
+->Expo
+->React Native Vector Icons
+->Local JSON data handling
+->`expo-router` for navigation
+
+
+
+#### Internship Submission
+
+This app was developed as part of my internship task submission.  
+It demonstrates UI/UX design using React Native, routing, and local storage handling.
+
+---
+
+#### Author
+
+**Jithesh Kumar J.**  
+GitHub: [@mitnic-mathew-4224](https://github.com/mitnic-mathew-4224)
+
+If you have any questions or suggestions, feel free to reach out via GitHub or email.

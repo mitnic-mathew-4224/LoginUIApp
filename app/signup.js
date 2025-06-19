@@ -1,19 +1,23 @@
 import {useState} from 'react';
 import {View, Text, TextInput, TouchableOpacity, StyleSheet, Alert} from 'react-native';
-import {useRouter} from 'expo-router';
+import {useRouter} from 'expo-router'; // For navigating between screens
 import { Image } from 'react-native';
-import logo from '../assets/logo.png';
+import logo from '../assets/logo.png';// Importing logo image
 
 
 export default function SignupScreen(){
-    const router = useRouter();
+    const router = useRouter();// Hook for navigation
+
     const [name,setName] = useState('');
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
     const [ConfirmPassword, setConfirmPassword] = useState('');
 
+
+    // Function to handle signup 
     const handleSignup = () => {
 
+        // Check if any field is empty
         if (!name || !email || !password || !ConfirmPassword ){
             Alert.alert('Error','Please Fill in all fields');
             return;
@@ -24,8 +28,10 @@ export default function SignupScreen(){
             return;
         }
 
+
+        // If validation passes, show success message and navigate to login page
         Alert.alert('Success', 'Account Created Successfully!');
-        router.pust('/login');
+        router.push('/login');
     };
 
     return(
@@ -77,6 +83,7 @@ export default function SignupScreen(){
 }
 
 
+// Styles for Signup Screen components
 const styles = StyleSheet.create({
     container: {
       flex: 1,

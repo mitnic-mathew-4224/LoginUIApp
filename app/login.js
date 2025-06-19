@@ -3,30 +3,38 @@ import { ToastAndroid, Platform } from 'react-native';
 import {View, Text, TextInput, TouchableOpacity, StyleSheet, Alert} from 'react-native';
 import {Link } from 'expo-router';
 import { Image } from 'react-native';
-import logo from '../assets/logo.png';
-import users from '../data/user.json';
+import logo from '../assets/logo.png'; // Importing logo image
+import users from '../data/user.json';// Importing user data from local JSON
 
 export default function LoginScreen(){
+
+    // State variables to store input values and toggle password visibility
     const [email, setEmail]= useState('');
     const [password, setPassword] = useState('');
     const [hidePassword, setHidePassword] = useState(true);
 
+    // Function to handle login logic
     const handleLogin = () => {
         const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
         if (!emailRegex.test(email)) {
           Alert.alert('Invalid Email', 'Please enter a valid email address.');
           return;
         }
-      
+
+
+        // Ensure password is not empty
         if (!password) {
           Alert.alert('Missing Password', 'Please enter your password.');
           return;
         }
-      
+
+        // Check for a matching user in the JSON file
         const user = users.find(
           (u) => u.email === email && u.password === password
         );
 
+
+        // Show appropriate success/failure message
         if (user) {
           Alert.alert('Login Successful', `Welcome, ${email}`);
         }
@@ -85,6 +93,8 @@ export default function LoginScreen(){
     );
 }
 
+
+// Styles for Login Screen components
 const styles = StyleSheet.create({
     container:{
         flex:1,

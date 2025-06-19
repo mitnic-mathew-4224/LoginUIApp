@@ -1,9 +1,9 @@
 import {View, Text, StyleSheet, TouchableOpacity, Image } from 'react-native';
 import { Link } from 'expo-router';
-import logo from '../assets/logo.png'
+import logo from '../assets/logo.png'// Importing the app logo
 
 
-
+// Functional component for the Get Started screen
 export default function GetStartedScreen(){
     return(
         <View style = {styles.container}>
